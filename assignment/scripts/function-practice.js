@@ -98,19 +98,20 @@ console.log('should return true:', find('c', 'cat'))
 console.log('should return false:', find('a', 'cat'))
 
 // 9. Function to return the sum of all numbers in an array
-let numArray = [10, 20, 30, 40];
-function sumAll(array) {
-  let sum = 0;
-for (let i = 0; i < array.length; i++) {
-  sum += array[i];
-  return sum;
-}
-console.log('this should be 90:', sumAll(numArray) )
+
 
   // TODO: loop to add items
 
   // TODO: return the sum
-}
+  let numArray = [10, 20, 30, 40];
+  function sumAll(array) {
+    let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i]; 
+  }
+  return sum;
+  }
+  console.log('this should be 100:', sumAll(numArray) )
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
