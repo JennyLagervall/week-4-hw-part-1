@@ -13,18 +13,12 @@ console.log('Test - should say "Hello World!"', hello());
 
 
 //2. Function to return an personalized hello, using the `name` argument.
-//for example 'Hello, Jo!', or 'Hello, Stacy!'
-
-//function helloName(name){
-//return 'Hello, ${name}!';
-//}
-//helloName('Jenny')
-//console.log('this should say Hello, Jenny!', helloname('jenny'));
+//for example 'Hello, Jo!', or 'Hello, Stacy!
 
 
 //Remember to call the function to test
 function helloName(name){
-return 'Hello ${name}!';
+return `Hello, ${name}!`;
 }
 helloName('Jenny');
 console.log('this should say Hello, Jenny!', helloName('Jenny') );
@@ -62,7 +56,7 @@ console.log('this should be false:', isPositive(-3));
 //    array is empty, return `undefined`.
 let fruitArray = ['apple', 'pear', 'grapes', 'oranges', 'bananas']
 function getLast(array) {
-return array[array.length-1];
+return array[array.length - 1];
 }
 console.log('the last item in the fruit array is:', getLast(fruitArray))
 
@@ -70,25 +64,21 @@ let blankArray = []
 console.log('this should return undefined:', getLast(blankArray))
 
 // 7. Function to find a value in an array. Return true if the 
-//    value is found and false otherwise. Use a loop;
-//    DO NOT use Array.includes, Array.indexOf, or Array.find 
+//  value is found and false otherwise. Use a loop;
+//  DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array){
-  for (let i = 0; i < 4; i++) {
-    console.log(i);
+for (let i = 0; i < array.length; i++) {
+  if (array[i] === value) {
+    return true
+  } else {
+    return false
    }
-   
+  }
+  }
 
-}
-  //for (value of array){
-    //if( value === 'apple'){
-        //return true
-    //} else {
-        //return false
-    //}
-//}
-//}
+ 
 console.log('should return true:', find('apple', fruitArray))
-console.log('should return false:', find('pear', fruitArray))
+console.log('should return false:', find('spinach', fruitArray))
 
 
 // ----------------------
@@ -96,14 +86,27 @@ console.log('should return false:', find('pear', fruitArray))
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
+function isFirstLetter(letter, string) { 
+  if (string[0] === letter) {
+    return true 
+     } else {
+      return false
 
+     }
 }
-
+console.log('should return true:', find('c', 'cat'))
+console.log('should return false:', find('a', 'cat'))
 
 // 9. Function to return the sum of all numbers in an array
+let numArray = [10, 20, 30, 40];
 function sumAll(array) {
   let sum = 0;
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
+  return sum;
+}
+console.log('this should be 90:', sumAll(numArray) )
+
   // TODO: loop to add items
 
   // TODO: return the sum
